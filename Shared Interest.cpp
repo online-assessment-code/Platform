@@ -11,7 +11,7 @@ int maxShared(int n, vector<int> from, vector<int> to, vector<int> w){
     for(auto it1: m1){
         for(auto it2: it1.second){
             if(it2.second == res)
-                ans = max(ans, it1.first.it2.first);
+                ans = max(ans, it1.first * it2.first);
         }
     }
     return ans;
