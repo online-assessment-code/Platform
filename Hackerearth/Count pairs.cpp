@@ -1,11 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
-const int maxn = 2e5 + 5;
-vector<int> freq, dCount;
+const int maxn = 1e6 + 5;
 long long solve(vector<int> A, int X){
     int N = A.size();
-    freq = vector<int> (maxn);
-    dCount = vector<int> (maxn);
+    map<int, int> freq, dCount;
     for(int i = 0; i < N; i++) {
 		A[i] = __gcd(A[i], X);
 		freq[A[i]]++;
